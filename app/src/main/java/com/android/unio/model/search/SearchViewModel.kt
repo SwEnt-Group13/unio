@@ -120,7 +120,7 @@ class SearchViewModel @Inject constructor(private val repository: SearchReposito
   }
 
   /** Clears the list of associations and sets the search status to [Status.IDLE]. */
-  private fun clearAssociations() {
+  fun clearAssociations() {
     _associations.value = emptyList()
     status.value = Status.IDLE
   }
