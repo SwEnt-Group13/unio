@@ -155,6 +155,7 @@ fun AssociationSearchBar(
   var searchQuery by remember { mutableStateOf("") }
   var isExpanded by rememberSaveable { mutableStateOf(false) }
   val associationResults by searchViewModel.associations.collectAsState()
+  searchViewModel.clearAssociations()
   val searchState by searchViewModel.status.collectAsState()
   val context = LocalContext.current
 
